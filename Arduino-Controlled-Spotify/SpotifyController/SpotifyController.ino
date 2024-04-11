@@ -56,7 +56,7 @@ void loop() {
 
   // creating an if-statement to decode the signal sent from the transmitter, which is the remote. We store the signal in the 'results' variable.
   if (irrecv.decode(&results)){
-
+    
     // creating an if-statement to check if the value is equal to a hex value.
     if (results.value == 0XFFFFFFFF)
 
@@ -67,7 +67,7 @@ void loop() {
     switch (results.value){
 
       // CASE: 1. If the value is equal to '0xFFE21D', it represents the pause button.
-      case 0xFFE21D:
+      case 0xFF02FD:
 
       // printing the keyword 'stop' to the serial monitor for recognition by the python script.
       Serial.println("stop");
